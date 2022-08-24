@@ -1,0 +1,306 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+}
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+
+}
+
+section {
+    padding: 4rem 0 3rem;
+}
+
+/* header  */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: lightcyan;
+    box-shadow: 0 1px 4px gray;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.1rem;
+    color: black;
+    font-family: 'Tahoma';
+    font-weight: 700;
+}
+
+#cart-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* cart  */
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 310px;
+    min-height: 100vh;
+    background-color: honeydew;
+    padding: 20px;
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: .3s;
+}
+
+.cart.active {
+    right: 0;
+}
+
+.cart-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cart-box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box {
+    display: grid;
+    row-gap: .5rem;
+}
+
+.cart-product-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-price {
+    font-weight: 500;
+}
+
+.cart-quantity {
+    border: 1px solid gray;
+    outline-color: dark;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.cart-remove {
+    font-size: 25px;
+    color: red;
+    cursor: pointer;
+}
+
+.cart-remove:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+}
+
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total-price {
+    margin-left: .5rem;
+}
+
+.btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background-color: darkcyan;
+    color: white;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.btn-buy:hover {
+    background-color: green;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: .8rem;
+    font-size: 2rem;
+    color: darkblue;
+    cursor: pointer;
+}
+
+/* shop */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.shop {
+    margin-top: 2rem;
+}
+
+/* shop-content  */
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+}
+
+.product-box {
+    position: relative;
+}
+
+.product-box:hover {
+    padding: 10px;
+    border: 1px solid lavender;
+    transition: .4s;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: .5rem;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.price {
+    font-weight: 900;
+}
+
+.add-cart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: .3rem;
+}
+
+.add-cart:hover {
+    background-color: green;
+}
+
+/* footer starts here  */
+footer {
+    background-color: #243A73;
+    padding: 2% 5%;
+}
+
+footer a {
+    color: white;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: black;
+}
+
+/* footer ends here  */
+
+
+/* making responsive */
+
+@media screen and (max-width: 1080px) {
+    .nav {
+        padding: 15px;
+    }
+
+    section {
+        padding: 3rem 0 2rem;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .shop {
+        margin-top: 2rem !important;
+
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .nav {
+        padding: 11px;
+    }
+
+    .logo {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 3rem 0 2rem;
+    }
+
+    .cart {
+        width: 320px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    .cart {
+        width: 280px;
+    }
+
+    .shop {
+        margin-top: 1rem !important;
+
+    }
+
+}
